@@ -11,7 +11,7 @@ Great for testing simple deployments to the cloud
 ## Run It
 
 `npm start`
-#He Bhagwan
+#he bhagwan
 
 ### Ports Used:
 `http://localhost:3000
