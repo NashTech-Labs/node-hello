@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: appServer
   tasks:
   - name: Display the date
     command: date
