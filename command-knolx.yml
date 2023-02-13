@@ -15,6 +15,7 @@
     debug:
       msg: "{{dateOutPut.stderr}}"
   - name: Install Apache HTTP server
+    become: true
     yum: name=httpd update_cache=yes state=latest
 ...
 
