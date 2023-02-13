@@ -13,9 +13,14 @@
      msg: "{{dateOutPut.stdout}}"
   - name: Display the std error of dateOutPut
     debug:
-      msg: "{{dateOutPut.stderr}}"
+     msg: "{{dateOutPut.stderr}}"
   - name: Install Apache HTTP server
-    become: true
     yum: name=httpd update_cache=yes state=latest
+  - name: Start HTTP Server
+    service: name=httpd enabled=yes state=started
+  - name: Insert Index Page
+    template:
+      src: index.html
+      dest: /var/www/html/index.html
 ...
 
