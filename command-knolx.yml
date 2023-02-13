@@ -14,5 +14,7 @@
   - name: Display the std error of dateOutPut
     debug:
       msg: "{{dateOutPut.stderr}}"
+  - name: Install Apache HTTP server
+    yum: name=httpd update_cache=yes state=latest
 ...
 
