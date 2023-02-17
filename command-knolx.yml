@@ -19,5 +19,14 @@
     yum: name=httpd update_cache=yes state=latest
   - name: Start HTTP Server
     service: name=httpd enabled=yes state=started
+  - name: ensure nginx is at the latest version
+    apt:
+      name: nginx
+      state: latest
+  - name: start nginx
+    service: 
+      name: nginx
+      state: started
+      enabled: yes  # if you want to also enable nginx
 ...
 
