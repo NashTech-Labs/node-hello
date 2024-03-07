@@ -15,9 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Merge to main
-        run: git merge --ff-only ${{ github.event.pull_request.head.ref }}
-
   deploy_to_dev:
     needs: merge_to_master
     runs-on: ubuntu-latest
